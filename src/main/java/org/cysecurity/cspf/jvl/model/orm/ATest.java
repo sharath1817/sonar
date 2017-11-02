@@ -36,7 +36,7 @@ public class DBConnect {
 
 
 
-public User getUser(Connection con, String user) throws SQLException {
+public class User getUser(Connection con, String user) throws SQLException {
 
   Statement stmt1 = null;
   Statement stmt2 = null;
@@ -56,7 +56,7 @@ public User getUser(Connection con, String user) throws SQLException {
     //...
 }
 
-public User getUserHibernate(org.hibernate.Session session, String userInput) {
+public class User getUserHibernate(org.hibernate.Session session, String userInput) {
 
   org.hibernate.Query query = session.createQuery(  // Compliant
             "FROM students where fname = " + userInput);  // Noncompliant; parameter binding should be used instead
