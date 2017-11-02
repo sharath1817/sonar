@@ -29,6 +29,9 @@ public class DBConnect {
        String dbfullurl = properties.getProperty("dburl")+properties.getProperty("dbname");
        String jdbcdriver = properties.getProperty("jdbcdriver");
             Connection con=null;
+		String query = "SELECT * FROM users WHERE userid ='"+ userid + "'" + " AND password='" + password + "'";
+		Statement stmt = connection.createStatement();
+		ResultSet rs = stmt.executeQuery(query);
           try
                    {
                     Class.forName(jdbcdriver);
