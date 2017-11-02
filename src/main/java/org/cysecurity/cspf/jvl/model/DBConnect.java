@@ -28,7 +28,7 @@ public class DBConnect {
          String dbpass = properties.getProperty("dbpass");
        String dbfullurl = properties.getProperty("dburl")+properties.getProperty("dbname");
        String jdbcdriver = properties.getProperty("jdbcdriver");
-           
+            Connection con=null;
           try
                    {
                     Class.forName(jdbcdriver);
