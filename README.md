@@ -1,7 +1,7 @@
 This is a "Vulnerable" Web Application developed by Cyber Security and Privacy Foundation(www.cysecurity.org). This app is intended for the Java Programmers and other people who wish to learn about Web application vulnerabilities and write secure code.
 
 ----------------------------------
-The full course on Hacking and Securing Web Java Programs is available in 
+The full course on Hacking and Securing Web Java Programs is available in 1111
  
 https://www.udemy.com/hacking-securing-java-web-programming/
 
