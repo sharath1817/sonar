@@ -25,7 +25,24 @@ import java.util.Properties;
 public class DBConnect {
     public Connection connect(String path) throws IOException,ClassNotFoundException,SQLException
     {
-		
+		String query=null;
+		String userid = request.getParameter("userid");
+	String password = request.getParameter("password");
+	Class.forName("sun.jdbc.odbc.JdbcOdbcDriver");
+	connection = DriverManager.getConnection("jdbc:odbc:projectDB");
+
+	query = "SELECT * FROM Users WHERE user_id ='" + userid + "' AND password ='" + password +"'";
+
+	PreparedStatement ps = connection.prepareStatement(query);
+	ResultSet users = ps.executeQuery();
+
+	if(users.next()){
+
+	//some thing here
+	}
+	else{
+
+		}
 		 String dbpass=null;
 		 String con=null;
         Properties properties=new Properties();
@@ -34,15 +51,9 @@ public class DBConnect {
          String dbpass = properties.getProperty("dbpass");
        String dbfullurl = properties.getProperty("dburl")+properties.getProperty("dbname");
        String jdbcdriver = properties.getProperty("jdbcdriver");
-            Connection con=null;
-			String query=null;
-		Statement stmt=null;
-		String userid=sharath;
-		String password=sharath;
-		
-		String query = "SELECT * FROM users WHERE userid ='"+ userid + "'" + " AND password='" + password + "'";
-		Statement stmt = connection.createStatement();
-		ResultSet rs = stmt.executeQuery(query);
+           
+			
+		 
           try
                    {
                     Class.forName(jdbcdriver);
