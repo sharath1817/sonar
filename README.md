@@ -2,7 +2,7 @@ This is a "Vulnerable" Web Application developed by Cyber Security and Privacy F
 
 ----------------------------------
 The full course on Hacking and Securing Web Java Programs is available in 
------------------------------------
+ 
 https://www.udemy.com/hacking-securing-java-web-programming/
 
 **Warning**: Don't run this app in Your Main Machine or in  an online server.  Install it in Vitual Machine.
