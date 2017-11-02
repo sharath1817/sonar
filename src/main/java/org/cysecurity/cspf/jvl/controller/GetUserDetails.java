@@ -26,7 +26,7 @@ public class GetUserDetails {
 		Statement stmt = null;
 		ResultSet rs = null;
 		try{
-		con = DBConnection.getConnection();
+		
 		stmt = con.createStatement();
 		String query = "select name, country, password from Users where email = '"+id+"' and password='"+pwd+"'";
 		System.out.println(query);
