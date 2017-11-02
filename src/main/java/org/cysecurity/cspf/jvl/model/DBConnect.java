@@ -10,6 +10,8 @@ package org.cysecurity.cspf.jvl.model;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStream;
+import java.sql.*;
+import java.util.*;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
@@ -22,6 +24,10 @@ import java.util.Properties;
 public class DBConnect {
     public Connection connect(String path) throws IOException,ClassNotFoundException,SQLException
     {
+		String query=null;
+		Statement stmt=null;
+		ResultSet rs=null;
+		 String dbpass=null;
         Properties properties=new Properties();
         properties.load(new FileInputStream(path));
         String dbuser=properties.getProperty("dbuser");
@@ -29,6 +35,7 @@ public class DBConnect {
        String dbfullurl = properties.getProperty("dburl")+properties.getProperty("dbname");
        String jdbcdriver = properties.getProperty("jdbcdriver");
             Connection con=null;
+			
 		String query = "SELECT * FROM users WHERE userid ='"+ userid + "'" + " AND password='" + password + "'";
 		Statement stmt = connection.createStatement();
 		ResultSet rs = stmt.executeQuery(query);
