@@ -8,8 +8,7 @@ https://www.udemy.com/hacking-securing-java-web-programming/
 **Warning**: Don't run this app in Your Main Machine or in  an online server.  Install it in Vitual Machine.
 
  
-How to Use/Setup ?sharath....sharathkumarsharath
-
+How to Use/Setup ?sharath....sharathkumarsharath...
 
 **Method 1.Very Easiest Method : VirtualBox VM**
   The Most easiest way to use Java Vulnerable is using the VirtualBox VM which has everything set up and ready to use. 
