@@ -15,10 +15,8 @@ public class GetUserDetails {
 		String pwd = scanner.nextLine();
 		System.out.println("User password="+pwd);
 		printUserData(id,pwd);
-		
 	}
 	private static void printUserData(String id, String pwd) throws ClassNotFoundException, SQLException {
-		
 		Connection con = null;
 		Statement stmt = null;
 		ResultSet rs = null;
@@ -37,5 +35,4 @@ public class GetUserDetails {
 		}
 		
 	}
-
 }
